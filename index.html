@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Portfolio</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/1636643afb.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("atXaPAG5EvldD1P_r");
+    })();
+  </script>
+</head>
+
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure id="personal-logo">
+                <img src="" alt="no logo">
+            </figure>
+            <ul class="nav__link--list">
+
+                <li class="nav__link">
+                    <a href="#" class="
+                nav__link--anchor 
+                link__hover-effect
+                link__hover-effect--black">About</a>
+                </li>
+
+                <li class="nav__link">
+                    <a href="#" class="
+                nav__link--anchor 
+                link__hover-effect
+                link__hover-effect--black
+                ">Projects</a>
+                </li>
+
+                <li class="nav__link">
+                    <a href="#" class="
+                nav__link--anchor 
+                link__hover-effect
+                link__hover-effect--black
+                " onclick="toggleModal()">Contact</a>
+                </li>
+
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
+                nav__link--anchor 
+                link__hover-effect
+                link__hover-effect--black
+                "><i class="fa-solid fa-circle-half-stroke"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Sam.</h1>
+            </div>
+            <div class="header__para">
+                <p class="header__para">
+                    Lorem ipsum dolor, sit amet consectetur <b class="orange">adipisicing elit.</b> Suscipit quibusdam
+                    optio explicabo incidunt
+                    autem debitis esse.
+                    <br>
+                    Lorem ipsum <b class="orange">dolor sit amet.</b>
+                </p>
+                <div class="social__list">
+                    <a href="" class="social__link click">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" class="social__link click">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="" class="social__link click">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <button class="btn__mail click" onclick="toggleModal()">
+            <i class="fa-solid fa-envelope"></i>
+        </button>
+        <a href="#projects" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__subtitle modal__subtitle--about">Frontend Software Engineer</h5>
+                <p class="modal__para"></p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <i class="modal__language--img fa-brands fa-html5"></i>
+                        <span class="language__name">HTML</span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="modal__language--img fa-brands fa-css3-alt"></i>
+                        <span class="language__name">CSS</span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="modal__language--img fa-brands fa-js"></i>
+                        <span class="language__name">JAVASCRIPT</span>    
+                    </figure>
+                    <figure class="modal__language">
+                        <i class="modal__language--img fa-brands fa-react"></i>
+                        <span class="language__name">REACT</span>    
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__subtitle modal__subtitle--contact">
+                    I'm currently open to new oppertunities
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input type="text" class="input" name="user_name" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input type="Email" class="input" name="user_email" required></input>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea type="text" class="input" name="message" required></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon
+                </div>
+            </div>
+        </div>
+        <img src="/Tutorial Exclusive Eportfolio/assets/semi circle.svg" alt="" class="shape shape--0">
+        <img src="/Tutorial Exclusive Eportfolio/assets/circle.svg" alt="" class="shape shape--1">
+        <img src="/Tutorial Exclusive Eportfolio/assets/squiggly.svg" alt="" class="shape shape--2">
+        <img src="/Tutorial Exclusive Eportfolio/assets/circle.svg" alt="" class="shape shape--3">
+        <img src="/Tutorial Exclusive Eportfolio/assets/triangle.svg" alt="" class="shape shape--4">
+        <img src="/Tutorial Exclusive Eportfolio/assets/circle.svg" alt="" class="shape shape--5">
+        <img src="/Tutorial Exclusive Eportfolio/assets/squiggly.svg" alt="" class="shape shape--6">
+        <img src="/Tutorial Exclusive Eportfolio/assets/circle.svg" alt="" class="shape shape--7">
+        <img src="/Tutorial Exclusive Eportfolio/assets/semi circle.svg" alt="" class="shape shape--8">
+    </section>
+    <section id="projects">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">
+                    Here are some of my <span class="orange">Projects</span>
+                </h1>
+                <ul class="projects__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="/Tutorial Exclusive Eportfolio/assets/blinker mockup.png" class="project__img"
+                                alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Car sales project
+                                </h3>
+                                <h4 class="project__description--subtitle">
+                                    css, html, javascript
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis, itaque
+                                    voluptatibus, quaerat aperiam deserunt, consequuntur perspiciatis minus quas
+                                    accusamus ut cumque eos illum! Eos ex ab obcaecati iste et.
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="#" class="project__description--link">
+                                        <i class="fa-solid fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+                <figure class="img__wrapper">
+                    <img class="footer__logo--img" src="" alt="no logo">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white
+                ">GITHUB</a>
+                    <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white
+                ">LINKEDIN</a>
+                    <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white
+                ">EMAIL</a>
+                    <a href="" class="
+                footer__social--link
+                link__hover-effect
+                link__hover-effect--white
+                ">RESUME</a>
+                </div>
+                <div class="footer__copyright">Made by Sam Evans</div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
